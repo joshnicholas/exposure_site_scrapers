@@ -21,12 +21,12 @@ nsw = pd.DataFrame(thing['data']['monitor'])
 # print(nsw)
 # print(nsw.columns)
 
-nsw_count = len(nsw.index)
+# nsw_count = len(nsw.index)
 
 
 old = pd.read_csv(data_endpoint)
 
-print(len(old.index))
+# print(len(old.index))
 
 combo = old.append(nsw)
 

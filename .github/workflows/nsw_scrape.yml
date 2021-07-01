@@ -22,9 +22,10 @@ jobs:
       - name: 💿 Install Requirements                             
         run: pip install -r reqs.txt
         
-      - name: 🍳 Update dataset
+      - name: 🍳 Update NSW
         run: python nsw_scraper.py
-      - name: update vic
+        
+      - name: Update VIC
         run: python vic_scraper.py
         
       - name: 🚀 Commit and push if it changed

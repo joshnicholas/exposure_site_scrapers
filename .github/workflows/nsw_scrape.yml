@@ -28,6 +28,9 @@ jobs:
       - name: Update VIC
         run: python vic_scraper.py
         
+      - name: Update QLD
+        run: python qld_scraper.py
+        
       - name: 🚀 Commit and push if it changed
         run: |
           git config user.name "${GITHUB_ACTOR}"

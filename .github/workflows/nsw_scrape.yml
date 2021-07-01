@@ -24,6 +24,8 @@ jobs:
         
       - name: 🍳 Update dataset
         run: python nsw_scraper.py
+      - name: update vic
+        run: python vic_scraper.py
         
       - name: 🚀 Commit and push if it changed
         run: |

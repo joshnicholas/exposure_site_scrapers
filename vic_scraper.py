@@ -19,6 +19,7 @@ df = df[['Suburb', 'Site_title','Exposure_date', 'Exposure_time',
 
 df.columns = ['Suburb', 'Site', 'Exposure day', 'Exposure time', 'Notes', 'Date added', 'Health advice']
 
+# print(df)
 
 old = pd.read_csv(data_endpoint)
 

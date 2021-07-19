@@ -31,8 +31,9 @@ jobs:
       - name: Update QLD
         run: python qld_scraper.py
         
-      - name: Update WA
-        run: python wa_scraper.py
+# Stop WA until there are hotspots
+#       - name: Update WA
+#         run: python wa_scraper.py
         
       - name: 🚀 Commit and push if it changed
         run: |

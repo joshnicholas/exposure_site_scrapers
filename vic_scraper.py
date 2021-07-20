@@ -1,5 +1,5 @@
 import requests
-import pandas as pd 
+import pandas as pd
 
 
 data_endpoint = "data/vic_exposure_sites.csv"
@@ -19,6 +19,8 @@ df = df[['Suburb', 'Site_title','Exposure_date', 'Exposure_time',
 
 df.columns = ['Suburb', 'Site', 'Exposure day', 'Exposure time', 'Notes', 'Date added', 'Health advice']
 
+print(df)
+
 # print(df)
 
 old = pd.read_csv(data_endpoint)
@@ -27,5 +29,5 @@ combo = old.append(df)
 
 combo = combo.drop_duplicates(subset=['Suburb', 'Site', 'Exposure day', 'Exposure time', 'Notes', 'Date added', 'Health advice'])
 
-with open(data_endpoint, "w") as f:
-    combo.to_csv(f, index=False, header=True)
+# with open(data_endpoint, "w") as f:
+#     combo.to_csv(f, index=False, header=True)
